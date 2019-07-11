@@ -7,15 +7,15 @@
         <img src="https://scontent-atl3-1.cdninstagram.com/vp/a67a299e0ec566398230a95489b39152/5DB5125D/t51.2885-19/s150x150/36967469_453622505113239_5983831497159737344_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com" class="rounded-circle">
       </div>
       <div class="col-9 p-5">
-        <div class=""> <h1>{{ $user->username }}</h1> </div>
+        <div class=""> <h1>{{$user->username}}</h1> </div>
         <div class="d-flex py-2">
           <div class="pr-5 "> <strong>123</strong> posts </div>
           <div class="pr-5 "> <strong>456</strong> followers </div>
           <div class="pr-5 "> <strong>789</strong> following </div>
         </div>
-        <div class=""> <strong>Bio Title</strong> </div>
-        <div class="">Bio</div>
-        <div class=""><strong><a href="#">website</a></strong></div>
+        <div class=""> <strong>{{$user->profile->title}}</strong> </div>
+        <div class="">{{$user->profile->bio}}</div>
+        <div class=""><strong><a href="#">{{$user->profile->url ?? 'No personal website.'}}</a></strong></div>
       </div>
     </div>
 
