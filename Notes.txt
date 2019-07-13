@@ -1,0 +1,13 @@
+$prof = new \App\Profile
+$prof->user_id=1
+$prof->title = "Title"
+$prof->bio = "bio"
+$prof->url = "url"
+$prof->profile_image = "prof_img.png"
+$prof->save()
+
+$post = new \App\Post
+$post->caption="cappyshun"
+$post->image="img.png"
+$post->user_id=1
+$post->save()

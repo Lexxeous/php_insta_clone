@@ -37,6 +37,7 @@
             type="file"
             class="form-control-file"
             name="image"
+            accept="image/*"
             onchange="loadFile(event)">
           <img id="output" class="pt-4" style="max-height: 300px"/>
           <script>
