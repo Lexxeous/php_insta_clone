@@ -11,3 +11,6 @@ $post->caption="cappyshun"
 $post->image="img.png"
 $post->user_id=1
 $post->save()
+
+
+{{$user->posts->count() == 1 ? "post" : "posts"}}
