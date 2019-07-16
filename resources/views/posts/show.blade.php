@@ -7,7 +7,7 @@
       <img src="/storage/{{$post->image}}" class="w-75">
     </div>
 
-    <div class="col-4">
+    <div class="col-4 offset-1">
       <div class="">
 
         <!-- Profile Image -->
@@ -20,8 +20,8 @@
           <div class="pl-2 d-flex">
             <div class="font-weight-bold">
               <a href="/profile/{{$post->user->id}}">
-                <span class="text-dark">{{$post->user->username}} • </span>
-              </a>
+                <span class="text-dark">{{$post->user->username}}</span>
+              </a> •
             </div>
             <a href="#" class="pl-1">Follow</a>
           </div>

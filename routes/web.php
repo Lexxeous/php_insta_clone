@@ -17,16 +17,13 @@ Routes take sequential priority and will simply take the first route that matche
 It is best to put routes with variables towards the bottom so that static routes are not ignored.
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-// Follow Route
+// Follow Routes
 Route::post('follow/{user}', 'FollowsController@store');
 
-// Post Routes
+// Posts Routes
+Route::get('/', 'PostsController@index');
 Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
 Route::get('/p/{post}', 'PostsController@show');
