@@ -36,9 +36,9 @@
 
         <!-- Social Media Details -->
         <div class="d-flex py-2">
-          <div class="pr-5 "> <strong>{{$user->posts->count()}}</strong> {{$user->posts->count() == 1 ? "post" : "posts"}} </div>
-          <div class="pr-5 "> <strong>{{$user->profile->followers->count()}}</strong> {{$user->profile->followers->count() == 1 ? "follower" : "followers"}} </div>
-          <div class="pr-5 "> <strong>{{$user->following->count()}}</strong> following </div>
+          <div class="pr-5 "> <strong>{{$postsCount}}</strong> {{$postsCount == 1 ? "post" : "posts"}} </div>
+          <div class="pr-5 "> <strong>{{$followersCount}}</strong> {{$followersCount == 1 ? "follower" : "followers"}} </div>
+          <div class="pr-5 "> <strong>{{$followingCount}}</strong> following </div>
         </div>
 
         <!-- Profile Details -->
