@@ -10,25 +10,22 @@
 
         <!-- Main Items -->
         <div class="d-flex justify-content-between align-items-baseline">
-          <h1>
+          <h1 class="d-flex">
 
             <!-- Username -->
             {{$user->username}}
 
             <!-- Edit Profile Gear -->
             @can('update', $user->profile)
-              <a href="/profile/{{$user->id}}/edit">
+              <a href="/profile/{{$user->id}}/edit" class="pl-2">
                 <img src="/storage/png/edit_profile_gear.png" style="max-height: 25px;">
               </a>
             @endcan
 
             <!-- Follow/Unfollow Button -->
             @cannot('update', $user->profile)
-              <span class="pl-2">
-                <button class="btn btn-primary">Follow</button>
-              </span>
+              <follow-button user-id="{{$user->id}}" follows="{{$follows}}"></follow-button>
             @endcan
-
           </h1>
 
           <!-- Add New Post Link -->
@@ -40,8 +37,8 @@
         <!-- Social Media Details -->
         <div class="d-flex py-2">
           <div class="pr-5 "> <strong>{{$user->posts->count()}}</strong> {{$user->posts->count() == 1 ? "post" : "posts"}} </div>
-          <div class="pr-5 "> <strong>456</strong> followers </div>
-          <div class="pr-5 "> <strong>789</strong> following </div>
+          <div class="pr-5 "> <strong>{{$user->profile->followers->count()}}</strong> {{$user->profile->followers->count() == 1 ? "follower" : "followers"}} </div>
+          <div class="pr-5 "> <strong>{{$user->following->count()}}</strong> following </div>
         </div>
 
         <!-- Profile Details -->
